@@ -16,6 +16,12 @@ import { SERVER_URL } from "../consts";
   <script type="module">
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
+    Waline.init({
+  el: '#waline',
+  // ...
+  reaction: true, // 开启反应
+});
+
     init({
       el: '#waline',
       serverURL: 'https://your-domain.vercel.app',
