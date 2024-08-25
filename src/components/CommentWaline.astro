@@ -16,11 +16,7 @@ import { SERVER_URL } from "../consts";
   <script type="module">
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
-    Waline.init({
-  el: '#waline',
-  // ...
-  reaction: true, // 开启反应
-});
+ 
 
     init({
       el: '#waline',
@@ -30,8 +26,44 @@ import { SERVER_URL } from "../consts";
     emoji: [
       'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
     ],
+
+      reaction: true, // 开启反应
     });
 
    
   </script>
 </body>
+
+<!-- br />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+/>
+<div class="comment">
+  <div id="waline" data-server-url={SERVER_URL}></div>
+</div>
+<script type="module" is:inline>
+  import { init } from "https://unpkg.com/@waline/client@v3/dist/waline.css";
+
+  const serverURL = document
+    .getElementById("waline")
+    .getAttribute("data-server-url");
+  init({
+    el: "#waline",
+    serverURL: serverURL,
+    dark: 'html[data-theme="dracula"]',
+    reaction: [
+      serverURL: 'https://comment-blond-two.vercel.app/'
+      // "https://saroprock.s3.bitiful.net/good.png",
+      // "https://saroprock.s3.bitiful.net/bad.png",
+      // "https://saroprock.s3.bitiful.net/happy.png",
+      // "https://saroprock.s3.bitiful.net/color.png",
+      // "https://saroprock.s3.bitiful.net/confuse.png",
+      // "https://saroprock.s3.bitiful.net/heart.png",
+      // "https://saroprock.s3.bitiful.net/rocket.png",
+      // "https://saroprock.s3.bitiful.net/eyes.png",
+    ],
+    emoji: false,
+    search: false,
+  });
+</script> -->
