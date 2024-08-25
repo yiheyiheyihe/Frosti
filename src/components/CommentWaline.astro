@@ -8,6 +8,10 @@ import { SERVER_URL } from "../consts";
     rel="stylesheet"
     href="https://unpkg.com/@waline/client@v3/dist/waline.css"
   />
+
+  @media (prefers-color-scheme: dark) {  
+    /* 暗黑模式下的样式 */  
+  }
   <!-- ... -->
 </head>
 <body>
@@ -20,13 +24,13 @@ import { SERVER_URL } from "../consts";
       serverURL: 'https://your-domain.vercel.app',
 
        // 设置 emoji 为微博与哔哩小黄脸
-    emoji: [
-      'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
-    ],
+      emoji: [
+        'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
+      ],
+
+      
 
       reaction: true, // 开启反应
-
-      dark: auto,
 
     });
 
