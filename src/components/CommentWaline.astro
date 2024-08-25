@@ -25,15 +25,15 @@ import { SERVER_URL } from "../consts";
         'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
       ],
 
-       dark: 'html[data-theme="dark"]',
+
       reaction: true, // 开启反应
 
     });
     Waline.init({
-      el: '#waline',
-      serverURL: 'YOUR_SERVER_URL',
-      dark: 'auto' // 自动根据系统设置切换暗黑模式
-  });
+  el: '#waline',
+  serverURL: 'YOUR_SERVER_URL',
+  dark: 'html[data-theme="dark"]' // CSS 选择器匹配暗黑模式
+});
    
   </script>
 </body>
