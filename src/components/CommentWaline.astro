@@ -9,9 +9,6 @@ import { SERVER_URL } from "../consts";
     href="https://unpkg.com/@waline/client@v3/dist/waline.css"
   />
 
-  @media (prefers-color-scheme: dark) {  
-    /* 暗黑模式下的样式 */  
-  }
   <!-- ... -->
 </head>
 <body>
@@ -28,8 +25,7 @@ import { SERVER_URL } from "../consts";
         'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
       ],
 
-      
-
+       dark: 'html[data-theme="dark"]',
       reaction: true, // 开启反应
 
     });
