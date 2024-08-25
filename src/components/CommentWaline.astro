@@ -11,6 +11,14 @@ import { SERVER_URL } from "../consts";
   <!-- ... -->
 </head>
 <body>
+  <div id="article-info">
+    <!-- ... -->
+    阅读量: <span class="waline-pageview-count" data-path="<Your/Path/Name>" />
+    <!-- ... -->
+  </div>
+  // ...
+  reaction: true, // 开启反应
+});
   <!-- ... -->
   <div id="waline"></div>
   <script type="module">
@@ -28,6 +36,8 @@ import { SERVER_URL } from "../consts";
     ],
 
       reaction: true, // 开启反应
+
+      pageview: true, // 浏览量统计
     });
 
    
