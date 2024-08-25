@@ -63,22 +63,22 @@ export const menuItems = [
     ],
   }, // Blog page with sub-items
   {
-    id: "项目",
-    text: "Project",
+    id: "project",
+    text: "项目",
     href: "/project",
     svg: "project",
     target: "_self",
   }, // Projects page
   {
-    id: "朋友",
-    text: "Friend",
+    id: "friend",
+    text: "朋友",
     href: "/friend",
     svg: "friend",
     target: "_self",
   }, // Friends page
   {
-    id: "联系",
-    text: "Contact",
+    id: "contact",
+    text: "联系",
     href: "mailto:contact.evesunmaple@outlook.com", // Contact email
     target: "_blank", // Open in a new tab
     svg: "contact",
