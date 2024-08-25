@@ -16,16 +16,11 @@ import { SERVER_URL } from "../consts";
     阅读量: <span class="waline-pageview-count" data-path="<Your/Path/Name>" />
     <!-- ... -->
   </div>
-  // ...
-  reaction: true, // 开启反应
 });
   <!-- ... -->
   <div id="waline"></div>
   <script type="module">
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-
- 
-
     init({
       el: '#waline',
       serverURL: 'https://your-domain.vercel.app',
