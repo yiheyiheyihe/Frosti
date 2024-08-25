@@ -3,8 +3,8 @@
 
 // Site title and description
 export const SITE_TAB = "Rian's Blog";
-export const SITE_TITLE = "Blog";
-export const SITE_DESCRIPTION = "A blog template";
+export const SITE_TITLE = "Rain 的个人主页";
+export const SITE_DESCRIPTION = "我的模板";
 export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
@@ -30,11 +30,11 @@ export const infoTest = {
 
 // Menu items for navigation
 export const menuItems = [
-  { id: "home", text: "Home", href: "/", svg: "home", target: "_self" }, // Home page
-  { id: "about", text: "About", href: "/about", svg: "about", target: "_self" }, // About page
+  { id: "home", text: "主页", href: "/", svg: "home", target: "_self" }, // Home page
+  { id: "about", text: "关于", href: "/about", svg: "about", target: "_self" }, // About page
   {
     id: "blog",
-    text: "Blogs",
+    text: "博客",
     href: "/blog",
     svg: "blog",
     target: "_self",
@@ -63,21 +63,21 @@ export const menuItems = [
     ],
   }, // Blog page with sub-items
   {
-    id: "project",
+    id: "项目",
     text: "Project",
     href: "/project",
     svg: "project",
     target: "_self",
   }, // Projects page
   {
-    id: "friend",
+    id: "朋友",
     text: "Friend",
     href: "/friend",
     svg: "friend",
     target: "_self",
   }, // Friends page
   {
-    id: "contact",
+    id: "联系",
     text: "Contact",
     href: "mailto:contact.evesunmaple@outlook.com", // Contact email
     target: "_blank", // Open in a new tab
