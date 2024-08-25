@@ -8,7 +8,7 @@ import { SERVER_URL } from "../consts";
     rel="stylesheet"
     href="https://unpkg.com/@waline/client@v3/dist/waline.css"
   />
-
+  
   <!-- ... -->
 </head>
 <body>
@@ -29,7 +29,11 @@ import { SERVER_URL } from "../consts";
       reaction: true, // 开启反应
 
     });
-
+    Waline.init({
+      el: '#waline',
+      serverURL: 'YOUR_SERVER_URL',
+      dark: 'auto' // 自动根据系统设置切换暗黑模式
+  });
    
   </script>
 </body>
