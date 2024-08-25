@@ -11,7 +11,7 @@ import { SERVER_URL } from "../consts";
   <div id="waline" data-server-url={SERVER_URL}></div>
 </div>
 <script type="module" is:inline>
-  import { init } from "https://comment-blond-two.vercel.app/";
+  import { init } from "https://unpkg.com/@waline/client@v3/dist/waline.css";
 
   const serverURL = document
     .getElementById("waline")
@@ -21,7 +21,7 @@ import { SERVER_URL } from "../consts";
     serverURL: serverURL,
     dark: 'html[data-theme="dracula"]',
     reaction: [
-      serverURL:'https://comment-blond-two.vercel.app/'
+      serverURL: 'https://comment-blond-two.vercel.app/'
       // "https://saroprock.s3.bitiful.net/good.png",
       // "https://saroprock.s3.bitiful.net/bad.png",
       // "https://saroprock.s3.bitiful.net/happy.png",
