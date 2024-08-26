@@ -32,7 +32,7 @@ tags:
     <h1>你好,Hello World</h1>
     //java 代码（脚本）
     <%
-        System.out.println("你好,jsp~");
+        System.out.println("你好");
     %>
 ```
 
@@ -40,7 +40,7 @@ tags:
 
 ==JSP本质就是一个Servlet==
 JSP 在被访问时，由JSP 容器（Tomcat服务器）将其==转换为一个 Java文件（Servlet）==，再由JSP 容器将其编译，最终对外提供服务的就是这个字节码文件
-·![](assets/JSP/file-20240809103014399.png)
+
 ## JSP 脚本
 ### 分类
 1. <% ... %> ：内容会直接放到_jspService()方法之中
