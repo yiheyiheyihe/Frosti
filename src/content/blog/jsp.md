@@ -26,10 +26,11 @@ tags:
 ```
 3. 建立文件
 4. 写代码
-```
+```javaScript
 //html 代码
 <h1>你好,Hello World</h1>
 //java 代码（脚本）
 <%
     System.out.println("你好,jsp~");
+%>
 ```
