@@ -15,4 +15,17 @@ tags:
 > JSP=HTML+Java
 
 ## JSP 快速入门
-
+1. 导入坐标
+```java
+ <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+```
+3. 建立文件
+4. 写代码
+```java
+    System.out.println("你好,jsp~");
+```
