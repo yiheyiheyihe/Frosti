@@ -41,21 +41,21 @@ export const menuItems = [
     subItems: [
       {
         id: "all",
-        text: "All blogs",
+        text: "所有",
         href: "/blog",
         svg: "post",
         target: "_self",
       }, // All blog
       {
-        id: "tech",
-        text: "Tech blogs",
-        href: "/blog/categories/tech",
+        id: "study",
+        text: "学习",
+        href: "/blog/categories/study",
         svg: "cube",
         target: "_self",
-      }, // Technology category
+      }, // study category
       {
         id: "life",
-        text: "Life blogs",
+        text: "生活",
         href: "/blog/categories/life",
         svg: "heart",
         target: "_self",
@@ -64,7 +64,7 @@ export const menuItems = [
   }, // Blog page with sub-items
   {
     id: "project",
-    text: "项目",
+    text: "随笔",
     href: "/project",
     svg: "project",
     target: "_self",
