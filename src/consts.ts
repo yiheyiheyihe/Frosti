@@ -56,10 +56,19 @@ export const menuItems = [
       {
         id: "life",
         text: "生活",
-        href: "/blog/categories/life",
+        href: "/blog/categories/test",
         svg: "heart",
         target: "_self",
       }, // Life category
+
+      {
+        id: "life",
+        text: "随笔",
+        href: "/blog/categories/test",
+        svg: "heart",
+        target: "_self",
+      }, // Life category
+
     ],
   }, // Blog page with sub-items
   {
