@@ -5,6 +5,7 @@ pubDate: 07 18 2024
 image: https://saroprock.oss-cn-hangzhou.aliyuncs.com/img/diary-968592_1280.jpg
 categories:
   - life
+  - study
 tags:
   - Frosti
   - Blog
