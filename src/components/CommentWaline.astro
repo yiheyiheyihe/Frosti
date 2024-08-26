@@ -2,123 +2,35 @@
 import { SERVER_URL } from "../consts";
 ---
 
-
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>你的页面标题</title>
-  <!-- 引入 Waline 的样式表 -->
-  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
-  <!-- ... 其他头部元素 ... -->
-  <style>
-    :root {
-      --waline-border: none;
-      --waline-box-shadow: 0 12px 40px rgba(0, 128, 255, 0.25);
-    }
-    /* 134 151 168 / 25% */
-    @media (prefers-color-scheme: dark) {
-      body {
-        --waline-box-shadow: 0 12px 40px #0f0e0d;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- ... 页面的其他内容 ... -->
-
-  <!-- Waline 评论系统的容器 -->
-  <div id="waline"></div>
-
-  <!-- ... 页面的其他内容 ... -->
-
-  <!-- 在页面底部引入 Waline 的初始化脚本 -->
-  <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-
-    init({
-      el: '#waline',
-      serverURL: 'https://comment-blond-two.vercel.app/',
-      emoji: [
-        'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
-      ],
-      reaction: true,
-      dark: 'html[data-theme="dark"]' // CSS 选择器匹配暗黑模式
-    });
-  </script>
-</body>
-</html>
-
-
-
-
-<!-- <head>
-  <!-- ... -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
-  />
-  
-  <!-- ... -->
-</head>
-<body>
-  <!-- ... -->
-  <div id="waline"></div>
-  <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-    init({
-      el: '#waline',
-      serverURL: 'https://your-domain.vercel.app',
-
-       // 设置 emoji 为微博与哔哩小黄脸
-      emoji: [
-        'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
-      ],
-
-
-      reaction: true, // 开启反应
-
-    });
-    Waline.init({
-  el: '#waline',
-  serverURL: 'YOUR_SERVER_URL',
-  dark: 'html[data-theme="dark"]' // CSS 选择器匹配暗黑模式
-});
-   
-  </script>
-</body> -->
-
-<!-- br />
+<br />
 <link
   rel="stylesheet"
-  href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  href="https://unpkg.com/@waline/client@v3/dist/waline-meta.css"
 />
 <div class="comment">
   <div id="waline" data-server-url={SERVER_URL}></div>
 </div>
 <script type="module" is:inline>
-  import { init } from "https://unpkg.com/@waline/client@v3/dist/waline.css";
+  import { init } from "https://unpkg.com/@waline/client@v3/dist/waline.js";
 
   const serverURL = document
     .getElementById("waline")
     .getAttribute("data-server-url");
   init({
     el: "#waline",
-    serverURL: serverURL,
+    serverURL: "https://comment-blond-two.vercel.app/",
     dark: 'html[data-theme="dracula"]',
     reaction: [
-      serverURL: 'https://comment-blond-two.vercel.app/'
-      // "https://saroprock.s3.bitiful.net/good.png",
-      // "https://saroprock.s3.bitiful.net/bad.png",
-      // "https://saroprock.s3.bitiful.net/happy.png",
-      // "https://saroprock.s3.bitiful.net/color.png",
-      // "https://saroprock.s3.bitiful.net/confuse.png",
-      // "https://saroprock.s3.bitiful.net/heart.png",
-      // "https://saroprock.s3.bitiful.net/rocket.png",
-      // "https://saroprock.s3.bitiful.net/eyes.png",
+      "https://saroprock.s3.bitiful.net/good.png",
+      "https://saroprock.s3.bitiful.net/bad.png",
+      "https://saroprock.s3.bitiful.net/happy.png",
+      "https://saroprock.s3.bitiful.net/color.png",
+      "https://saroprock.s3.bitiful.net/confuse.png",
+      "https://saroprock.s3.bitiful.net/heart.png",
+      "https://saroprock.s3.bitiful.net/rocket.png",
+      "https://saroprock.s3.bitiful.net/eyes.png",
     ],
     emoji: false,
     search: false,
   });
-</script> -->
+</script>
