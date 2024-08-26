@@ -56,15 +56,7 @@ export const menuItems = [
       {
         id: "life",
         text: "生活",
-        href: "/blog/categories/test",
-        svg: "heart",
-        target: "_self",
-      }, // Life category
-
-      {
-        id: "life",
-        text: "随笔",
-        href: "/blog/categories/test",
+        href: "/blog/categories/life",
         svg: "heart",
         target: "_self",
       }, // Life category
