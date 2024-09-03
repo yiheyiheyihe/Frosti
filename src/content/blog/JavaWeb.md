@@ -1,3 +1,15 @@
+---
+title: jsp
+description: 黑马jsp
+pubDate: 07 18 2024
+image: https://saroprock.oss-cn-hangzhou.aliyuncs.com/img/diary-968592_1280.jpg
+categories:
+  - study
+tags:
+  - javaWeb
+  - Blog
+---
+
 ## Web核心
 Web：全球与广域网，也称万维网（www），能够通过浏览器访问的网站
 ## javaWeb技术栈
@@ -65,11 +77,11 @@ Web 服务器是一个应用软件，对HTTP协议的操作进行封装，使得
     </dependency>
 ```
 3. 定义一个类，==实现 Servlet接口==，并重写接口中所有方法，并在 ==service方法中输入==一句话
-```cs
+```java
 public void ServletDemo1 implements Servlet{ public void srvice(){sout("hello Servlet");}}
 ```
 5. 配置：在类上使用@WebServlet 注解，配置该 Servlet的访问路径
-```cs
+```java
 @WebServlet("/demo1")
 public class ServletDemo1 implements Servlet{}
 ```
@@ -107,7 +119,7 @@ Question：ServletDemo1类的对象，该类的services 是认来创建与调用
 >init 被==创建的时候执行==，只执行==一==次
 >service方法被==访问==的时候调用，==每访问1次就调用1次（页面刷新）==
 >destroy方法在Servlet 被==销毁==的时候调用，只执行==1次==
-```Java
+```java
   /**
   * Servlet生命周期方法
   */
