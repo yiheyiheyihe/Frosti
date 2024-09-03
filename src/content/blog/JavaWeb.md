@@ -185,7 +185,8 @@ Question：ServletDemo1类的对象，该类的services 是认来创建与调用
 ### 体系结构 
 ==Servlet>GenericServlet>HTTPServlet==
 >这是他们之间的关系，GenericServlet继承了Servlet的5个方法并重写，HTTPServlet继承了GenericServlet接口，并把HTTP的请求方式进行封装，封装为doGet/doPost
-![](assets/JavaWeb/file-20240802171409248.png)
+<!-- ![](assets/JavaWeb/file-20240802171409248.png) -->
+
 ```java
 @WebServlet("/demo4");
 public void ServletDemo1 extends HttpServlet{
@@ -251,7 +252,7 @@ Response：设置响应数据
 #### Request 继承体系
 1. Tomcat 会将请求的数据封装为一个request 对象，并且创建request 对象传递到service方法中
 2. 使用request 对象，查阅javaEE API文档的HttpServletRequest接口
-![](assets/JavaWeb/file-20240802201934648.png)
+<!-- ![](assets/JavaWeb/file-20240802201934648.png) -->
 #### Request 获取请求数据
 ###### 普通获取请求数据
 请求数据分为3部分
@@ -326,7 +327,7 @@ sout(username);
 1. Post：设置输入流的编码
 `req.setCharacterEncoding("UTF-8")`
 2. Get：利用他们URL码相同则字节相同的结论，使用byte与String进行编码
-![](assets/JavaWeb/file-20240805104407589.png)
+<!-- ![](assets/JavaWeb/file-20240805104407589.png) -->
 ```java 
 username="张三";
 
@@ -349,14 +350,14 @@ username="张三";
 - URL编码
 >将字符串按照编码方式转为二进制
 >每个字节转为2个16进制数并在前边加上%
->![](assets/JavaWeb/file-20240805104527042.png)
+<!-- >![](assets/JavaWeb/file-20240805104527042.png) -->
 1. 编码
 `URLEncoder.encode(str,"utf-8");`
 2. 解码
 `URLDecoder.decode(s."ISO-8859-1);`
 #### Request 请求转发
 >请求转发（forward）：一种在服务器内部的资源跳转方式
-![](assets/JavaWeb/file-20240805112420504.png)
+<!-- ![](assets/JavaWeb/file-20240805112420504.png) -->
 - 实现方式：
 `req.tggetRequestDispatcher("资源B路径").forward(req,resp);`
 - 请求转发资源间==共享数据==：使用Request 对象
@@ -382,7 +383,7 @@ username="张三";
 `ServletOutputStream getOutputStream();`：获取字节输出流
 #### 完成重定向
 >重定向（Redirect）：一种资源==跳转方式==（与request 对象对应[Request 请求转发](#Request%20请求转发)）
-![](assets/JavaWeb/file-20240805150026758.png)
+<!-- ![](assets/JavaWeb/file-20240805150026758.png) -->
 - 实现方式：
 `resp.setStatus(302)`：设置响应状态码
 `resp.setHeader("location","资源B的虚拟路径);`：设置==响应头==
