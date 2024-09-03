@@ -57,19 +57,19 @@ Web 服务器是一个应用软件，对HTTP协议的操作进行封装，使得
 ### 快速入门
 1. 创建 web项目，==导入Servlet依赖坐标与Tomcat7插件==
 ```java
-<dependency>
-	<group>javax.servlet</group>
-	<artifactld>javax.servlet-api</artifactld>
-	<version>3.1.0</version>
-	<scope>provided</scope>
-</dependency>
+ <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
 ```
 3. 定义一个类，==实现 Servlet接口==，并重写接口中所有方法，并在 ==service方法中输入==一句话
-```java
+``` java
 public void ServletDemo1 implements Servlet{ public void srvice(){sout("hello Servlet");}}
 ```
 5. 配置：在类上使用@WebServlet 注解，配置该 Servlet的访问路径
-```java
+``` java
 @WebServlet("/demo1")
 public class ServletDemo1 implements Servlet{}
 ```
@@ -107,7 +107,7 @@ Question：ServletDemo1类的对象，该类的services 是认来创建与调用
 >init 被==创建的时候执行==，只执行==一==次
 >service方法被==访问==的时候调用，==每访问1次就调用1次（页面刷新）==
 >destroy方法在Servlet 被==销毁==的时候调用，只执行==1次==
-```java
+``` java
   /**
   * Servlet生命周期方法
   */
