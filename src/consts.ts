@@ -88,12 +88,12 @@ export const menuItems = [
 
 // Social media and contact icons
 export const socialIcons = [
-  {
-    href: "https://afdian.net/a/saroprock",
-    ariaLabel: "Support my work",
-    title: "Support my work",
-    svg: "support",
-  },
+  // {
+  //   href: "https://afdian.net/a/saroprock",
+  //   ariaLabel: "Support my work",
+  //   title: "Support my work",
+  //   svg: "support",
+  // },
   {
     href: "https://github.com/EveSunMaple",
     ariaLabel: "Github",
