@@ -2,7 +2,7 @@
 title: Vue
 description: Vue学习笔记
 pubDate: 06 9 2024
-image: 
+image: https://saroprock.oss-cn-hangzhou.aliyuncs.com/img/diary-968592_1280.jpg
 categories:
   - study
 tags:
