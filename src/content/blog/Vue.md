@@ -2,7 +2,7 @@
 title: Vue
 description: Vue学习笔记
 pubDate: 06 9 2024
-image: https://saroprock.oss-cn-hangzhou.aliyuncs.com/img/diary-968592_1280.jpg
+image: https://gitee.com/yiheyiheyihe/pictures/raw/master/20240906095554.png
 categories:
   - study
 tags:
@@ -306,7 +306,7 @@ __说明__：`v-if` 、`v-else-if`、`v-else` 必须挨着使用
 
 ​										`v-if` 直接被销毁，`v-show` 仍然显示
 
-![](Vue.assets/20240905222644.png)
+https://gitee.com/yiheyiheyihe/pictures/raw/master/20240905222644.png
 
 __总结__：
 

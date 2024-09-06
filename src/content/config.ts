@@ -26,10 +26,3 @@ const blog = defineCollection({
 
 export const collections = { blog };
 
-export default {
-  build: {
-    rollupOptions: {
-      external: ['Vue.assets/20240905222644.png']
-    }
-  }
-}
