@@ -65,7 +65,7 @@ export const menuItems = [
   }, // Blog page with sub-items
   {
     id: "project",
-    text: "随笔",
+    text: "项目",
     href: "/project",
     svg: "project",
     target: "_self",
@@ -95,13 +95,13 @@ export const socialIcons = [
   //   svg: "support",
   // },
   {
-    href: "https://github.com/EveSunMaple",
+    href: "https://github.com/yiheyiheyihe",
     ariaLabel: "Github",
     title: "Github",
     svg: "github",
   },
   {
-    href: "https://space.bilibili.com/438392347",
+    href: "https://space.bilibili.com/440120016?spm_id_from=333.1007.0.0",
     ariaLabel: "BiliBili",
     title: "BiliBili",
     svg: "bilibili",
