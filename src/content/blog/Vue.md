@@ -304,7 +304,7 @@ __说明__：`v-if` 、`v-else-if`、`v-else` 必须挨着使用
 
 `v-show`：元素无论初始条件如何，始终会被渲染，只有CSS `display` 属性会被切换
 
-​										`v-if` 直接被销毁，`v-show` 仍然显示
+​										`v-if` 直接被销毁，`v-show` 仍然显示哈
 
 ![20240905222644.png](https://free2.yunpng.top/2024/09/13/66e3c505bf864.png)
 
