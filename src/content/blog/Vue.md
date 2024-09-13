@@ -306,7 +306,7 @@ __说明__：`v-if` 、`v-else-if`、`v-else` 必须挨着使用
 
 ​										`v-if` 直接被销毁，`v-show` 仍然显示
 
-https://gitee.com/yiheyiheyihe/pictures/raw/master/20240905222644.png
+![20240905222644.png](https://free2.yunpng.top/2024/09/13/66e3c505bf864.png)
 
 __总结__：
 
