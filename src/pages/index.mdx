@@ -14,7 +14,7 @@ import LinkCard from "../components/page/LinkCard.astro";
   <BaseCard title="Home">
     <div class="flex">
       <div class="p-6">
-          # Hi there! 😀👋
+          <h1>Hi there! 😀👋</h1>
           <hr/>
           This is Rain's Blog📖
           Welcome!
@@ -22,53 +22,65 @@ import LinkCard from "../components/page/LinkCard.astro";
     </div>
   </BaseCard>
   <BaseCard title="Home" image="/index.webp">
-## 🏡/Home
----
-<p>会发一些文章，用来记录与学习</p>
+    ## 🏡/Home
+    ---
+    <p>会发一些文章，用来记录与学习</p>
 
-<h3>导航🛸</h3>
+    <h3>导航🛸</h3>
 
-<div class="grid grid-cols-2 gap-4">
-  <div class="bg-base-100 ease-in-out hover:scale-[102%] hover:shadow-xl hover:transition-all link-card rounded-lg">
-    <a href="/blog" target="_self">
-      <div class="flex-col hero-content md:flex-row">
-        <div class="w-full grow">
-          <h1 class="font-bold text-xl">博客</h1>
-          <p class="py-1 text-1xl">想到的与看到的</p>
-        </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-base-100 ease-in-out hover:scale-[102%] hover:shadow-xl hover:transition-all link-card rounded-lg">
+        <a href="/blog" target="_self">
+          <div class="flex-col hero-content md:flex-row">
+            <div class="w-full grow">
+              <h1 class="font-bold text-xl">博客</h1>
+              <p class="py-1 text-1xl">想到的与看到的</p>
+            </div>
+          </div>
+        </a>
       </div>
-    </a>
-  </div>
-  <div class="bg-base-100 ease-in-out hover:scale-[102%] hover:shadow-xl hover:transition-all link-card rounded-lg">
-    <a href="/project" target="_self">
-      <div class="flex-col hero-content md:flex-row">
-        <div class="w-full grow">
-          <h1 class="font-bold text-xl">项目</h1>
-          <p class="py-1 text-1xl">想法的实现</p>
-        </div>
+      <div class="bg-base-100 ease-in-out hover:scale-[102%] hover:shadow-xl hover:transition-all link-card rounded-lg">
+        <a href="/project" target="_self">
+          <div class="flex-col hero-content md:flex-row">
+            <div class="w-full grow">
+              <h1 class="font-bold text-xl">项目</h1>
+              <p class="py-1 text-1xl">想法的实现</p>
+            </div>
+          </div>
+        </a>
       </div>
-    </a>
-  </div>
-  <div class="bg-base-100 ease-in-out hover:scale-[102%] hover:shadow-xl hover:transition-all link-card rounded-lg">
-    <a href="/about" target="_self">
-      <div class="flex-col hero-content md:flex-row">
-        <div class="w-full grow">
-          <h1 class="font-bold text-xl">关于</h1>
-          <p class="py-1 text-1xl">“我”与博客</p>
-        </div>
+      <div class="bg-base-100 ease-in-out hover:scale-[102%] hover:shadow-xl hover:transition-all link-card rounded-lg">
+        <a href="/about" target="_self">
+          <div class="flex-col hero-content md:flex-row">
+            <div class="w-full grow">
+              <h1 class="font-bold text-xl">关于</h1>
+              <p class="py-1 text-1xl">“我”与博客</p>
+            </div>
+          </div>
+        </a>
       </div>
-    </a>
-  </div>
-  <div class="bg-base-100 ease-in-out hover:scale-[102%] hover:shadow-xl hover:transition-all link-card rounded-lg">
-    <a href="/friend" target="_self">
-      <div class="flex-col hero-content md:flex-row">
-        <div class="w-full grow">
-          <h1 class="font-bold text-xl">友链</h1>
-          <p class="py-1 text-1xl">有趣的灵魂</p>
-        </div>
+      <div class="bg-base-100 ease-in-out hover:scale-[102%] hover:shadow-xl hover:transition-all link-card rounded-lg">
+        <a href="/friend" target="_self">
+          <div class="flex-col hero-content md:flex-row">
+            <div class="w-full grow">
+              <h1 class="font-bold text-xl">友链</h1>
+              <p class="py-1 text-1xl">有趣的灵魂</p>
+            </div>
+          </div>
+        </a>
       </div>
-    </a>
-  </div>
-</div>
+    </div>
+
+    <Collapse title="This is an example text.">
+      <BaseCard title="Home">
+        good
+      </BaseCard>
+      <LinkCard
+        title="aaaa"
+        desc="My blog project!"
+        url="https://github.com/EveSunMaple/Frosti"
+        img="/favicon.ico"
+      />
+    </Collapse>
   </BaseCard>
 </BaseLayout>
