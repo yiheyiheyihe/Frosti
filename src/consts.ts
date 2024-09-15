@@ -4,7 +4,7 @@
 // Site title and description
 export const SITE_TAB = "Rian's Blog";
 export const SITE_TITLE = "Rain 的个人主页";
-export const SITE_DESCRIPTION = "我的模板";
+export const SITE_DESCRIPTION = "我的博客";
 export const DATE_FORMAT = "ddd MMM DD YYYY";
 
 // User profile information
