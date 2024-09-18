@@ -12,7 +12,7 @@ export const USER_NAME = "Rian";
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
-export const SERVER_URL = "https://demo.saroprock.com";
+export const SERVER_URL = "https://rainn.asia/";
 
 // Some informative text on the site
 export const infoTest = {
