@@ -24,6 +24,7 @@ import ThemeIcon from "../components/ThemeIcon.astro";
   </div>
 </div>
 <script>
+<<<<<<< HEAD
   function getCleanText(element: HTMLElement) {
     let text = "";
     element.childNodes.forEach((node: ChildNode) => {
@@ -35,6 +36,8 @@ import ThemeIcon from "../components/ThemeIcon.astro";
     });
     return text;
   }
+=======
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
   function addContent() {
     const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
 
@@ -42,12 +45,20 @@ import ThemeIcon from "../components/ThemeIcon.astro";
       let tocContent = "<ul class='overflow-auto w-full list-none m-0 p-0'>";
       let levelCounters = [0, 0, 0, 0, 0, 0];
       headings.forEach((heading) => {
+<<<<<<< HEAD
         let headingText = getCleanText(heading as HTMLElement);
         const headingId = heading.id;
         const headingLevel = parseInt(heading.tagName.charAt(1), 10);
 
         if (headingId && headingText && headingLevel) {
           headingText = headingText.replace(/#/g, "");
+=======
+        const headingId = heading.id;
+        const headingText = heading.textContent;
+        const headingLevel = parseInt(heading.tagName.charAt(1), 10);
+
+        if (headingId && headingText && headingLevel) {
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
           const level = headingLevel - 1;
           levelCounters[level]++;
           levelCounters.fill(0, level + 1);

@@ -3,9 +3,14 @@ import dayjs from "dayjs";
 import { Image } from "astro:assets";
 import License from "../components/License.astro";
 import CommentWaline from "./CommentWaline.astro";
+<<<<<<< HEAD
 import { DATE_FORMAT } from "../consts";
 import type { CardInfo } from "../types";
 import { t } from "i18next";
+=======
+import { DATE_FORMAT, infoTest } from "../consts";
+import type { CardInfo } from "../types";
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
 const {
   title = "undefined",
   image,
@@ -13,8 +18,11 @@ const {
   badge,
   categories,
   tags,
+<<<<<<< HEAD
   word,
   time,
+=======
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
   isBlog = false,
   url = decodeURIComponent(Astro.url.toString()),
 } = Astro.props as CardInfo;
@@ -31,7 +39,11 @@ const hasTags = tags && tags.length > 0;
     image && (
       <Image
         src={image}
+<<<<<<< HEAD
         width="1920"
+=======
+        width="1920"  //1920
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
         height="1080"
         format="webp"
         alt={title}
@@ -46,6 +58,7 @@ const hasTags = tags && tags.length > 0;
     {
       isBlog && (
         <>
+<<<<<<< HEAD
           <h1 id="h1" class="mt-2">
             {title}
           </h1>
@@ -102,6 +115,53 @@ const hasTags = tags && tags.length > 0;
             </div>
           </div>
           <hr class="mt-6" />
+=======
+          <h1 id="h1">{title}</h1>
+          <div class="info mt-2">
+            {displayDate && (
+              <div class="badge badge-neutral">{displayDate}</div>
+            )}
+            <span>&thinsp;</span>
+            {badge && <div class="badge badge-primary">{badge}</div>}
+            <div class="tags mt-2">
+              {hasTategories ? (
+                categories.map((categoroy) => (
+                  <>
+                    <a
+                      href={`/blog/categories/${categoroy}`}
+                      class="btn btn-xs btn-accent"
+                    >
+                      {categoroy}
+                    </a>
+                    <span>&thinsp;</span>
+                  </>
+                ))
+              ) : (
+                <div class="btn btn-xs btn-secondary btn-disabled rounded-full">
+                  {infoTest.noCategory}
+                </div>
+              )}
+              {hasTags ? (
+                tags.map((tag) => (
+                  <>
+                    <a
+                      href={`/blog/tag/${tag}`}
+                      class="btn btn-xs btn-secondary"
+                    >
+                      {tag}
+                    </a>
+                    <span>&thinsp;</span>
+                  </>
+                ))
+              ) : (
+                <div class="btn btn-xs btn-secondary btn-disabled">
+                  {infoTest.noTag}
+                </div>
+              )}
+            </div>
+          </div>
+          <hr />
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
         </>
       )
     }

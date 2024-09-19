@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BaseCard from "../../components/BaseCard.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
+<<<<<<< HEAD
 import { t } from "i18next";
 
 export async function getStaticPaths() {
@@ -17,6 +18,20 @@ interface Props {
 
 const { post } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await post.render();
+=======
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await post.render();
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
 ---
 
 <BaseLayout title={post.data.title}>
@@ -27,8 +42,11 @@ const { Content, remarkPluginFrontmatter } = await post.render();
     badge={post.data.badge}
     categories={post.data.categories}
     tags={post.data.tags}
+<<<<<<< HEAD
     word={remarkPluginFrontmatter.totalCharCount}
     time={remarkPluginFrontmatter.readingTime}
+=======
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
     isBlog="true"
   >
     <Content />

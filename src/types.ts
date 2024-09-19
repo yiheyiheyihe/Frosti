@@ -1,5 +1,8 @@
 export interface Post {
+<<<<<<< HEAD
   [x: string]: any;
+=======
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
   data: {
     [x: string]: any;
     title: string;
@@ -10,10 +13,13 @@ export interface Post {
     categories: string[];
     tags: string[];
   };
+<<<<<<< HEAD
   remarkPluginFrontmatter: {
     totalCharCount: string;
     readingTime: string;
   };
+=======
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
   slug: string;
 }
 
@@ -35,8 +41,11 @@ export interface CardInfo {
   badge?: string;
   categories?: string[];
   tags?: string[];
+<<<<<<< HEAD
   word?: string;
   time?: string;
+=======
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
   isBlog: boolean;
   url?: string;
 }
@@ -49,8 +58,11 @@ export interface EnvelopeInfo {
   badge?: string;
   categories?: string[];
   tags?: string[];
+<<<<<<< HEAD
   word?: string;
   time?: string;
+=======
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
   isBlog: boolean;
   url: string;
 }

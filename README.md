@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧊 Frosti
 
 [![license](https://badgen.net/github/license/EveSunMaple/Frosti)](https://github.com/EveSunMaple/Frosti/blob/main/LICENSE)&nbsp;&nbsp;&nbsp;[![release](https://badgen.net/github/release/EveSunMaple/Frosti)](https://github.com/EveSunMaple/Frosti/releases)&nbsp;&nbsp;&nbsp;[![stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/github/EveSunMaple/Frosti)
@@ -119,3 +120,6 @@ If you have any questions or suggestions, feel free to submit an issue or commun
 @[Saicaca](https://github.com/saicaca) His inspiration was the main reason I created this theme
 
 @[WRXinYue](https://github.com/WRXinYue) Helped me a lot during my early days
+=======
+second
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f

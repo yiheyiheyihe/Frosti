@@ -5,7 +5,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import BaseCard from "../../components/BaseCard.astro";
 import { getCollection } from "astro:content";
 import Search from "astro-pagefind/components/Search";
+<<<<<<< HEAD
 import { t } from "i18next";
+=======
+import { infoTest } from "../../consts";
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   const posts = await getCollection("blog");
@@ -14,11 +18,16 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
 
   topPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   otherPosts.sort(
+<<<<<<< HEAD
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+=======
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
   );
 
   const sortedPosts = [...topPosts, ...otherPosts];
 
+<<<<<<< HEAD
   // 获取统计信息
   const postsWithStats = await Promise.all(
     sortedPosts.map(async (post) => {
@@ -37,6 +46,9 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
 
   // 使用 paginate 处理分页
   return paginate(postsWithStats, { pageSize: 8 });
+=======
+  return paginate(sortedPosts, { pageSize: 8 });
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
 }
 
 const { page }: { page: Page } = Astro.props;
@@ -89,8 +101,11 @@ const pageLinks = generatePageLinks(totalPages);
           badge={post.data.badge}
           categories={post.data.categories}
           tags={post.data.tags}
+<<<<<<< HEAD
           word={post.remarkPluginFrontmatter.totalCharCount}
           time={post.remarkPluginFrontmatter.readingTime}
+=======
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
           target="_self"
         />
       ))
@@ -113,7 +128,11 @@ const pageLinks = generatePageLinks(totalPages);
         <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"
         ></path>
       </svg>
+<<<<<<< HEAD
       <span class="hidden lg:inline ml-2">{t("label.prevPage")}</span>
+=======
+      <span class="hidden lg:inline ml-2">{infoTest.prevPage}</span>
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
     </a>
     <div class="join">
       {
@@ -153,7 +172,11 @@ const pageLinks = generatePageLinks(totalPages);
                 >
                   {link}
                 </a>
+<<<<<<< HEAD
               ),
+=======
+              )
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
             )}
           </>
         ) : (
@@ -176,7 +199,11 @@ const pageLinks = generatePageLinks(totalPages);
         ? `btn bg-base-100 shadow-xl`
         : `btn btn-disabled bg-base-100 shadow-xl`}
     >
+<<<<<<< HEAD
       <span class="hidden lg:inline ml-2">{t("label.nextPage")}</span>
+=======
+      <span class="hidden lg:inline ml-2">{infoTest.nextPage}</span>
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
       <svg
         class="h-6 w-6 fill-current md:h-8 md:w-8"
         xmlns="http://www.w3.org/2000/svg"

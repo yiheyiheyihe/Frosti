@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
@@ -26,13 +27,42 @@ export default defineConfig({
     scss: {
       includePaths: ["./src/styles"],
     },
+=======
+import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import icon from "astro-icon";
+import terser from '@rollup/plugin-terser';
+import sitemap from '@astrojs/sitemap';
+import pagefind from "astro-pagefind";
+import tailwind from "@astrojs/tailwind";
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import playformCompress from "@playform/compress";
+
+import swup from '@swup/astro';
+import SwupScrollPlugin from '@swup/scroll-plugin';
+import SwupParallelPlugin from '@swup/parallel-plugin';
+
+
+// https://astro.build/config
+export default defineConfig({
+  site: 'https://frosti.saroprock.com',
+  style: {
+    scss: {
+      includePaths: ['./src/styles']
+    }
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
   },
   integrations: [
     mdx(),
     icon(),
     swup({
       plugins: [new SwupScrollPlugin(), new SwupParallelPlugin()],
+<<<<<<< HEAD
       containers: ["#swup"],
+=======
+      containers: ["#swup"]
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
     }),
     terser({
       compress: true,
@@ -41,6 +71,7 @@ export default defineConfig({
     sitemap(),
     tailwind(),
     pagefind(),
+<<<<<<< HEAD
     astroI18next(),
     playformCompress(),
   ],
@@ -49,6 +80,14 @@ export default defineConfig({
       themes: {
         light: "github-light",
         dark: "github-dark",
+=======
+    playformCompress()],
+  markdown: {
+    shikiConfig: {
+      themes: {
+        light: 'github-light',
+        dark: 'github-dark',
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
       },
       transformers: [
         {
@@ -57,13 +96,20 @@ export default defineConfig({
             return code;
           },
           root(node) {
+<<<<<<< HEAD
             if (node.tagName === "pre") {
               node.tagName = "figure";
               node.properties.className = ["highlight", this.lang];
+=======
+            if (node.tagName === 'pre') {
+              node.tagName = 'figure';
+              node.properties.className = ['highlight', this.lang];
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
             }
           },
           pre(node) {
             const toolsDiv = {
+<<<<<<< HEAD
               type: "element",
               tagName: "div",
               properties: { className: ["highlight-tools"] },
@@ -73,10 +119,22 @@ export default defineConfig({
                   tagName: "div",
                   properties: { className: ["code-lang"] },
                   children: [{ type: "text", value: this.lang.toUpperCase() }],
+=======
+              type: 'element',
+              tagName: 'div',
+              properties: { className: ['highlight-tools'] },
+              children: [
+                {
+                  type: 'element',
+                  tagName: 'div',
+                  properties: { className: ['code-lang'] },
+                  children: [{ type: 'text', value: this.lang.toUpperCase() }],
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
                 },
               ],
             };
             const lineNumberCode = {
+<<<<<<< HEAD
               type: "element",
               tagName: "code",
               children: [],
@@ -91,17 +149,42 @@ export default defineConfig({
               type: "element",
               tagName: "pre",
               properties: { className: ["frosti-code", "code"] },
+=======
+              type: 'element',
+              tagName: 'code',
+              children: [],
+            };
+            const lineNumberPre = {
+              type: 'element',
+              tagName: 'pre',
+              properties: { className: ['frosti-code', 'gutter'] },
+              children: [lineNumberCode],
+            };
+            const codeContentPre = {
+              type: 'element',
+              tagName: 'pre',
+              properties: { className: ['frosti-code', 'code'] },
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
               children: [],
             };
             node.children.forEach((lineNode, index, count) => {
               count = 0;
               lineNode.children.forEach(() => {
+<<<<<<< HEAD
                 if (count & (1 === 1)) {
                   lineNumberCode.children.push({
                     type: "element",
                     tagName: "div",
                     properties: { className: ["line"] },
                     children: [{ type: "text", value: String(index + 1) }],
+=======
+                if (count & 1 === 1) {
+                  lineNumberCode.children.push({
+                    type: 'element',
+                    tagName: 'div',
+                    properties: { className: ['line'] },
+                    children: [{ type: 'text', value: String(index + 1) }],
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
                   });
                   index++;
                 }
@@ -111,6 +194,7 @@ export default defineConfig({
               codeContentPre.children.push(lineNode);
             });
             const table = {
+<<<<<<< HEAD
               type: "element",
               tagName: "div",
               properties: { className: ["highlight-code"] },
@@ -120,12 +204,24 @@ export default defineConfig({
               type: "element",
               tagName: "figure",
               properties: { className: ["highlight", this.lang] },
+=======
+              type: 'element',
+              tagName: 'div',
+              properties: { className: ['highlight-code'] },
+              children: [lineNumberPre, codeContentPre],
+            };
+            return {
+              type: 'element',
+              tagName: 'figure',
+              properties: { className: ['highlight', this.lang] },
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
               children: [toolsDiv, table],
             };
           },
         },
       ],
     },
+<<<<<<< HEAD
     remarkPlugins: [remarkMath, remarkAddAnchor, remarkReadingTime],
     rehypePlugins: [rehypeKatex,
       [
@@ -197,3 +293,9 @@ export default defineConfig({
       ]],
   },
 });
+=======
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex]
+  },
+});
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f

@@ -9,23 +9,38 @@ import Content from "../components/Content.astro";
 import TagCard from "../components/TagCard.astro";
 import CategoryCard from "../components/CategoryCard.astro";
 import { SITE_TAB, SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+<<<<<<< HEAD
 import i18next, { t, changeLanguage } from "i18next";
 
 changeLanguage("zh");
+=======
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
 const { title, image, includeSidebar = true } = Astro.props;
 ---
 
 <!doctype html>
+<<<<<<< HEAD
 <html lang={i18next.language} class="bg-base-300" data-theme="winter">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title class="sr-only">{`${title} - ${SITE_TAB}`}</title>
+=======
+<html lang="zh-cn" class="bg-base-300" data-theme="winter">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="sr-only">{`${SITE_TAB} - ${title}`}</title>
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
     <script is:inline>
       (function () {
         const storedTheme = localStorage.getItem("theme");
         const userPreferredTheme = window.matchMedia(
+<<<<<<< HEAD
           "(prefers-color-scheme: dark)",
+=======
+          "(prefers-color-scheme: dark)"
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
         ).matches
           ? "winter"
           : "dracula";
@@ -109,17 +124,28 @@ const { title, image, includeSidebar = true } = Astro.props;
           },
           function (err) {
             console.error("error", err);
+<<<<<<< HEAD
           },
+=======
+          }
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
         );
       });
     });
   }
 
   import mediumZoom from "medium-zoom/dist/pure";
+<<<<<<< HEAD
   mediumZoom(".main-card img:not(.link-card img)", { margin: 24, background: "#00000080" });
 
   document.addEventListener("swup:page:view", () => {
     mediumZoom(".main-card img:not(.link-card img)", { margin: 24, background: "#00000080" });
+=======
+  mediumZoom(".main-card img", { margin: 24, background: "#00000080" });
+
+  document.addEventListener("swup:page:view", () => {
+    mediumZoom(".main-card img", { margin: 24, background: "#00000080" });
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
   });
 
   document.addEventListener("DOMContentLoaded", addCopyButton);

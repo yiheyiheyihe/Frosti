@@ -1,6 +1,10 @@
 ---
 import { Image } from "astro:assets";
+<<<<<<< HEAD
 const { title, image, desc, url, badge, target = "_blank" } = Astro.props;
+=======
+const { title, image, desc, url, target = "_blank" } = Astro.props;
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
 ---
 
 <div
@@ -13,12 +17,18 @@ const { title, image, desc, url, badge, target = "_blank" } = Astro.props;
       class="envelope-back relative w-full h-full p-6 flex flex-col justify-between"
     >
       <a class="envelope-title" href={url} target={target}>
+<<<<<<< HEAD
         <h1 id={title} class="text-4xl leading-snug m-0 p-2">
           {title}
         </h1>
       </a>
       <div class="m-2">{desc}</div>
       {badge && <div class="badge badge-ghost m-2">{badge}</div>}
+=======
+        <h1 id={title} class="p-2 m-0">{title}</h1>
+      </a>
+      <div class="m-2">{desc}</div>
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
       <div class="m-2 flex">
         <span class="repo-user flex items-center"
           ><svg
@@ -103,11 +113,15 @@ const { title, image, desc, url, badge, target = "_blank" } = Astro.props;
   </div>
   {
     image && (
+<<<<<<< HEAD
       <a
         href={url}
         target={target}
         class="image-link relative w-full lg:w-2/5 h-auto rounded-none overflow-hidden lg:order-2 order-1"
       >
+=======
+      <div class="relative w-full lg:w-2/5 h-auto rounded-none overflow-hidden lg:order-2 order-1">
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
         <Image
           src={image}
           alt={title}
@@ -117,7 +131,11 @@ const { title, image, desc, url, badge, target = "_blank" } = Astro.props;
           loading="eager"
           class="object-cover w-full h-full"
         />
+<<<<<<< HEAD
       </a>
+=======
+      </div>
+>>>>>>> e996142fd1822200230f96d4058aa6478006f78f
     )
   }
 </div>
